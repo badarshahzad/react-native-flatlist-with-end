@@ -42,7 +42,7 @@ Optionally, you can add a prop `renderEndComponent`. It expects a function that 
         <Text style={{ textAlign: 'center' }}>
           No more items, check back later!
         </Text>
-      </View>;
+      </View>
     );
   }}
 />
