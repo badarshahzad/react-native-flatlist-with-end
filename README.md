@@ -21,7 +21,7 @@ Optionally, you can add a prop `renderEndComponent`. It expects a function that 
 # Demo
 ![Demo](https://raw.githubusercontent.com/jjingrong/react-native-flatlist-with-end/master/demo.png)
 
-# Example
+# Example 1
 ```
 <FlatListWithEnd
   scrollEnabled
@@ -46,6 +46,29 @@ Optionally, you can add a prop `renderEndComponent`. It expects a function that 
     );
   }}
 />
+```
+
+# Example 2
+
+```
+<FlatListWithEnd
+          scrollEnabled
+          renderItem={({ item, index }) => this._renderItem(item, index)}
+          data={this.state.addToCartList}
+          renderEndComponent={() => {
+            return (
+              <View>
+                <View style={{ paddingVertical: 15 }}>
+                  <Text style={{ textAlign: "center" }}>
+                    No more items, check back later!
+                  </Text>
+                </View>
+                {this.returnBillView()}
+              </View>
+            );
+          }}
+          keyExtractor={(item, index) => index.toString()}
+        />
 ```
 
 # API
